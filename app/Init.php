@@ -4,6 +4,9 @@
  */
 namespace App;
 
+use App\Activate;
+use App\Deactivate;
+
 class Init
 {
     function __construct()
@@ -13,11 +16,11 @@ class Init
 
     public function activate()
     {
-        
+        Activate::init();
     }
 
     public function deactivate()
     {
-
+        Deactivate::init();
     }
 }
