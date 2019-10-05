@@ -18,6 +18,10 @@ else{
     die('Cannot find autoload.');
 }
 
+define('GSWP_PLUGIN_PATH', plugin_dir_path(__FILE__));
+define('GSWP_PLUGIN_URL', plugin_dir_url(__FILE__));
+define('GSWP_PLUGIN', plugin_basename(__FILE__));
+
 use App\Init;
 
 if(class_exists(Init::class)){
