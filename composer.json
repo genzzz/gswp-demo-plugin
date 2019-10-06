@@ -1,8 +1,4 @@
 {
-    "name": "gs/gs-wp-demo-plugin",
-    "description": "Demo plugin",
-    "minimum-stability": "dev",
-    "require": {},
     "autoload": {
         "psr-4": {"App\\": "app/"}
     }

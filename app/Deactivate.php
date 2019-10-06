@@ -6,7 +6,7 @@ namespace App;
 
 class Deactivate
 {
-    public static function init()
+    public function __construct()
     {
         if($post_id = post_exists( "Test Page"))
             wp_delete_post( $post_id, true );

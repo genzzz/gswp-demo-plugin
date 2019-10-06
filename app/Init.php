@@ -6,23 +6,25 @@ namespace App;
 
 use App\Activate;
 use App\Deactivate;
+use App\Controllers\TestPage;
 
-class Init
+final class Init
 {
-    function __construct()
+    public function __construct()
     {
         if($post = get_page_by_path('test-page')){
             // find page by slug
+            new TestPage();
         }
     }
 
     public function activate()
     {
-        Activate::init();
+        new Activate();
     }
 
     public function deactivate()
     {
-        Deactivate::init();
+        new Deactivate();
     }
 }

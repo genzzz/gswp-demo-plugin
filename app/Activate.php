@@ -6,7 +6,7 @@ namespace App;
 
 class Activate
 {
-    public static function init()
+    public function __construct()
     {
         if(post_exists( "Test Page"))
             return;
