@@ -1,23 +1,27 @@
 <?php
 /**
  * @package GSWPDemoPlugin
+ * @author Genci Shabani
  */
 namespace App\Controllers;
 
-class TestPage
+use App\Controllers\Controller;
+use App\Models\TestModel;
+
+class TestPage extends Controller
 {
+    protected $view = 'test-page';
+
     public function __construct()
     {
-        add_filter('template_include', array($this, 'load_template'));
+        parent::__construct();
+
+        $this->insert_data('Test Page');
     }
 
-    public function load_template($template)
+    private function insert_data($string)
     {
-        $file = GSWP_PLUGIN_PATH . 'views/test-page.php';
-
-        if(file_exists($file))
-            return $file;
-
-        return $template;
+        $testModel = new TestModel();
+        $testModel->insert($string);
     }
 }

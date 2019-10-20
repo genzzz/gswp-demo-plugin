@@ -25,12 +25,12 @@ define('GSWP_PLUGIN', plugin_basename(__FILE__));
 use App\Init;
 
 if(class_exists(Init::class)){
-    $init = new Init();
+    $plugin = new Init();
 }
 else{
     die('Plugin cannot initialize.');
 }
 
-register_activation_hook(__FILE__, array($init, 'activate'));
+register_activation_hook(__FILE__, array($plugin, 'activate'));
 
-register_deactivation_hook(__FILE__, array($init, 'deactivate'));
+register_deactivation_hook(__FILE__, array($plugin, 'deactivate'));

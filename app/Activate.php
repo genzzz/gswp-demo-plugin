@@ -1,12 +1,18 @@
 <?php
 /**
  * @package GSWPDemoPlugin
+ * @author Genci Shabani
  */
 namespace App;
 
 class Activate
 {
     public function __construct()
+    {
+        $this->register_pages();
+    }
+
+    private function register_pages()
     {
         if(post_exists( "Test Page"))
             return;

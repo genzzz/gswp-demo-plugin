@@ -1,6 +1,7 @@
 <?php
 /**
  * @package GSWPDemoPlugin
+ * @author Genci Shabani
  */
 
 if(!defined('WP_UNINSTALL_PLUGIN')) die();

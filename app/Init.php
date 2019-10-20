@@ -1,6 +1,7 @@
 <?php
 /**
  * @package GSWPDemoPlugin
+ * @author Genci Shabani
  */
 namespace App;
 
@@ -12,10 +13,20 @@ final class Init
 {
     public function __construct()
     {
-        if($post = get_page_by_path('test-page')){
+        // echo $this->get_route();
+        if($this->get_route() == ''){
             // find page by slug
             new TestPage();
         }
+    }
+
+    private function get_route()
+    {
+        $route = $_SERVER['REQUEST_URI'];
+        $explode = explode('/', $route);
+        array_shift($explode);
+
+        return $explode[0];
     }
 
     public function activate()
