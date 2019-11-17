@@ -1,5 +1,14 @@
 {
     "autoload": {
         "psr-4": {"App\\": "app/"}
-    }
+    },
+    "require": {
+        "gs/test-package": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "git@github.com:genzzz/test-package.git"
+        }
+    ]
 }

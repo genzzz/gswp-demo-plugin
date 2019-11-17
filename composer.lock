@@ -1,0 +1,43 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "3ea3b31074b502d709a78969ac3de48f",
+    "packages": [
+        {
+            "name": "gs/test-package",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:genzzz/test-package.git",
+                "reference": "6ad890f0ba6a00bfd287339e6f72e9fe7bcac852"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "GS\\": ""
+                }
+            },
+            "authors": [
+                {
+                    "name": "G S",
+                    "email": "g@s.com"
+                }
+            ],
+            "description": "Test Package",
+            "time": "2019-11-17T01:37:17+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "gs/test-package": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -13,9 +13,7 @@ final class Init
 {
     public function __construct()
     {
-        // echo $this->get_route();
         if($this->get_route() == ''){
-            // find page by slug
             new TestPage();
         }
     }
